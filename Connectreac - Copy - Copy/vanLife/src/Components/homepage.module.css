@@ -1,0 +1,28 @@
+
+
+
+
+
+@media (min-width:  200px) and (max-width: 600px) {
+    .content{
+        width: 100%;
+        padding-inline: 1rem;
+    }
+    
+}
+@media (min-width: 600px) and (max-width: 900px) {
+    .content{
+        width: 70%;
+        padding-inline: 1rem;
+     
+    }
+    
+}
+
+
+@media (min-width: 900px) {
+    .content{
+        width: 50%;
+    }
+    
+}
