@@ -8,6 +8,8 @@ import PostClass from "../DBoperations/Posts/posts.js";
 const router = express.Router();
 import upload from "../DBoperations/Middlewares/multer.js";
 
+// some of these routes are just for getting registered users through postman and delete or updatee their record
+//just dummy process
 router.get("/users", Registration.getAllUsers);
 router.post("/register_user/", Registration.register);
 router.delete("/delete_user/:id", Registration.deleteUser);
@@ -18,7 +20,7 @@ router.get("/if_logged_redirect", Login.getLogin_Register_Page); // if logged in
 router.post("/login_user", Login.userLogin);
 
 //protected routes
-router.get("/protected", checkIfLoggedIn, ProtectedRoutes.getProtectedRoute);
+// router.get("/protected", checkIfLoggedIn, ProtectedRoutes.getProtectedRoute);
 
 // posts
 router.post("/create-post", [checkIfLoggedIn,upload.single('image'), PostClass.createPost]); //post req on create-post
